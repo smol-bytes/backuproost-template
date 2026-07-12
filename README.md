@@ -80,4 +80,4 @@ Honest caveats: don't copy-paste the raw text instead of importing (it comes in 
 
 ---
 
-Powered by [BackupRoost](https://github.com/smol-bytes/backuproost) — free and open source. To change the schedule, edit the `cron` line in [`.github/workflows/backup.yml`](.github/workflows/backup.yml).
+Powered by [BackupRoost](https://smol-bytes.github.io/backuproost-site/) — free, MIT-licensed. To change the schedule, edit the `cron` line in [`.github/workflows/backup.yml`](.github/workflows/backup.yml).
