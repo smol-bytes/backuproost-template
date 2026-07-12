@@ -19,7 +19,11 @@ Why you want this: Notion has no automatic backup. Deleted pages are gone from t
 
 <!-- screenshot: connection settings → Content access tab -->
 
-Still in the connection's settings, open **Content access** and add the **top-level pages** you want backed up. **All sub-pages are included automatically** — you only need the top of each tree.
+Still in the connection's settings:
+
+1. Open **Content access**.
+2. Click **Edit access**.
+3. Select the **top-level pages** you want backed up. **All sub-pages are included automatically** — you only need the top of each tree.
 
 *(You can also connect from inside Notion later — on any page: ••• → Connections → BackupRoost.)*
 
