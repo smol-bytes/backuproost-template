@@ -6,22 +6,22 @@ Why you want this: Notion has no automatic backup. Deleted pages are gone from t
 
 > **Reading this on the template page?** Click the green **Use this template** button (top right) → **Create a new repository** → name it something like `notion-backup` → select **🔒 Private** → **Create repository**. Then follow the steps below *in your new repository*.
 
-## Step 1 — Create a Notion integration *(~3 minutes)*
+## Step 1 — Create a Notion connection *(~3 minutes)*
 
-<!-- screenshot: notion integrations page, "New integration" form -->
+<!-- screenshot: notion "New connection" dialog with Access token selected -->
 
 1. Open [notion.so/profile/integrations](https://www.notion.so/profile/integrations) (sign in if asked).
-2. Click **New integration**. Name it `BackupRoost`, pick your workspace, leave type as **Internal**.
-3. Under **Capabilities**, only **Read content** is needed — you can untick the rest.
-4. Click **Save**, then **copy the Internal Integration Secret** (a long code starting with `ntn_` or `secret_`). Keep it handy for Step 3.
+2. Click **New connection**. Name it `BackupRoost`, keep **Access token** as the authentication method, pick your workspace, and click **Create connection**.
+3. In the connection's settings, under **Capabilities**, only **Read content** is needed — and you can select **No user information**.
+4. Copy the **Access token** (the copy icon next to the hidden `••••` field; the code starts with `ntn_` or `secret_`). Keep it handy for Step 3.
 
 ## Step 2 — Tell Notion which pages to back up
 
-<!-- screenshot: page ••• menu → Connections → BackupRoost -->
+<!-- screenshot: connection settings → Content access tab -->
 
-1. In Notion, open a **top-level page** you want backed up.
-2. Click the **•••** menu (top-right) → **Connections** → **➕ Add connection** → choose **BackupRoost**.
-3. Repeat for each top-level page or teamspace. **All sub-pages are included automatically** — you only need to connect the top of each tree.
+Still in the connection's settings, open **Content access** and add the **top-level pages** you want backed up. **All sub-pages are included automatically** — you only need the top of each tree.
+
+*(You can also connect from inside Notion later — on any page: ••• → Connections → BackupRoost.)*
 
 ## Step 3 — Give this repository the secret
 
@@ -38,7 +38,7 @@ Why you want this: Notion has no automatic backup. Deleted pages are gone from t
 
 1. Open the **Actions** tab of this repository. If GitHub asks, click **"I understand my workflows, go ahead and enable them."**
 2. Click **Notion backup** in the left sidebar → **Run workflow** → green **Run workflow** button.
-3. Wait a minute, then refresh. A green checkmark means your first backup is done — your pages are now in the [`pages/`](pages/) folder. *(Large workspaces sync at ~3 pages/second on the first run; after that only changed pages are fetched, so nightly runs are fast.)*
+3. Wait a minute, then refresh. A green checkmark means your first backup is done — go back to the repo's front page (the **Code** tab) and your pages are in the [`pages/`](pages/) folder. *(Large workspaces sync at ~3 pages/second on the first run; after that only changed pages are fetched, so nightly runs are fast.)*
 
 That's it. Every night at 03:00 UTC a new backup commit appears — no further action ever needed.
 
@@ -55,7 +55,9 @@ Every version of every page is kept forever: open any file → **History** to se
 
 ## Getting a page back
 
-Lost a page in Notion? Open its `.md` file here, click **Raw**, copy everything, and paste into a new Notion page — Notion converts the Markdown back automatically. For an older version, use the file's **History** first. (One-click automated restore is on the roadmap.)
+Lost a page in Notion? Open its `.md` file here and **download it** (the ⤓ icon in the file view). Then in Notion's left sidebar: **Import** → **Text & Markdown** → pick the file — Notion rebuilds the page. For an older version of the page, open the file's **History** first and download from there.
+
+Honest caveats: don't copy-paste the raw text instead of importing (it comes in as plain text, not formatted blocks); a few Notion-specific elements like toggles may need a quick touch-up after import; and images aren't recoverable yet — their links expire an hour after backup (downloading images into the backup, and one-click restore, are both on the roadmap).
 
 ## Troubleshooting
 
