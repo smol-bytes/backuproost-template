@@ -61,7 +61,9 @@ Every version of every page is kept forever: open any file → **History** to se
 
 Lost a page in Notion? Open its `.md` file here and **download it** (the ⤓ icon in the file view). Then in Notion's left sidebar: **Import** → **Text & Markdown** → pick the file — Notion rebuilds the page. For an older version of the page, open the file's **History** first and download from there.
 
-Honest caveats: don't copy-paste the raw text instead of importing (it comes in as plain text, not formatted blocks); a few Notion-specific elements like toggles may need a quick touch-up after import; and images aren't recoverable yet — their links expire an hour after backup (downloading images into the backup, and one-click restore, are both on the roadmap).
+Honest caveats: don't copy-paste the raw text instead of importing (it comes in as plain text, not formatted blocks); a few Notion-specific elements like toggles may need a quick touch-up after import; and images aren't recoverable yet — their links expire an hour after backup (downloading images into the backup is on the roadmap).
+
+**One-click restore — straight back into Notion, exactly as it was — is in the works.** Want it? [👍 this issue](https://github.com/smol-bytes/backuproost/issues/1) so we know to build it faster.
 
 ## Troubleshooting
 
