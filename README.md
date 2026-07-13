@@ -8,7 +8,7 @@ Why you want this: Notion has no automatic backup. Deleted pages are gone from t
 
 ## Step 1 — Create a Notion connection *(~3 minutes)*
 
-![Notion's New connection dialog with the name filled in and Access token selected](image.png)
+![Notion's New connection dialog with the name filled in and Access token selected](image-4.png)
 
 1. Open [notion.so/profile/integrations](https://www.notion.so/profile/integrations) (sign in if asked).
 2. Click **New connection**. Name it `BackupRoost`, keep **Access token** as the authentication method, pick your workspace, and click **Create connection**.
