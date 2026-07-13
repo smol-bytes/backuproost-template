@@ -8,7 +8,7 @@ Why you want this: Notion has no automatic backup. Deleted pages are gone from t
 
 ## Step 1 — Create a Notion connection *(~3 minutes)*
 
-<!-- screenshot: notion "New connection" dialog with Access token selected -->
+![Notion's New connection dialog with the name filled in and Access token selected](image.png)
 
 1. Open [notion.so/profile/integrations](https://www.notion.so/profile/integrations) (sign in if asked).
 2. Click **New connection**. Name it `BackupRoost`, keep **Access token** as the authentication method, pick your workspace, and click **Create connection**.
@@ -17,7 +17,7 @@ Why you want this: Notion has no automatic backup. Deleted pages are gone from t
 
 ## Step 2 — Tell Notion which pages to back up
 
-<!-- screenshot: connection settings → Content access tab -->
+![The connection's Content access tab, with Edit access on the right and top-level pages listed](image-1.png)
 
 Still in the connection's settings:
 
@@ -29,7 +29,7 @@ Still in the connection's settings:
 
 ## Step 3 — Give this repository the secret
 
-<!-- screenshot: repo Settings → Secrets and variables → Actions → New repository secret -->
+![GitHub repository settings showing Secrets and variables → Actions with a NOTION_TOKEN repository secret](image-2.png)
 
 1. In **this repository** on GitHub: **Settings** → **Secrets and variables** → **Actions**.
 2. Click **New repository secret**.
@@ -38,7 +38,7 @@ Still in the connection's settings:
 
 ## Step 4 — Turn it on
 
-<!-- screenshot: Actions tab, enable button, then Run workflow -->
+![The Actions tab with the Notion backup workflow selected and the Run workflow button visible](image-3.png)
 
 1. Open the **Actions** tab of this repository. If GitHub asks, click **"I understand my workflows, go ahead and enable them."**
 2. Click **Notion backup** in the left sidebar → **Run workflow** → green **Run workflow** button.
