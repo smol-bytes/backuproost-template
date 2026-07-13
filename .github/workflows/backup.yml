@@ -15,6 +15,8 @@ permissions:
 
 jobs:
   backup:
+    # skip on the template repo itself — only runs in repos created from the template
+    if: github.repository != 'smol-bytes/backuproost-template'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
